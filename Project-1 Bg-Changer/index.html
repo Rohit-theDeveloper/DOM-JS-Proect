@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bg-Changer</title>
+  <style>
+    .btn{
+      height: 100px;
+      width: 100px;
+      border: 1px solid black;
+      border-radius: 20px;
+    }
+
+    .btn:hover{
+      cursor: pointer;
+    }
+    h1{
+      text-align:center;
+      color:blueviolet;
+      font-size: 40px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    #btn-1{
+      background-color: red;
+    }
+    #btn-2{
+      background-color: gray;
+    }
+    #btn-3{
+      background-color: pink;
+    }
+    #btn-4{
+      background-color: green;
+    }
+    body{
+      margin: 5px solid black;
+      border: 5px solid green;
+      padding: 20px;
+      
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bg-Color Changer</h1>
+  <button class="btn" id="btn-1" value="red" >Red</button>
+  <button class="btn" id="btn-2" value="gray">Gray</button>
+  <button class="btn" id="btn-3" value="pink" >Pink</button>
+  <button class="btn" id="btn-4" value="green">Green</button>
+  <p style="font-size:smaller">Change background color onClick on button</p>
+</body>
+<script>
+  const btns = document.querySelectorAll('.btn');
+  const body = document.querySelector('body');
+ btns.forEach( function(btn){
+  btn.addEventListener('click', (e) => {
+    body.style.background = e.target.value;
+  })
+ })
+ </script>
+</html>
