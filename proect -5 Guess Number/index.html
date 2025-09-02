@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss"></style>
+    <title>Number Guessing Game</title>
+  </head>
+  <body class="bg-gray-400">
+    <div class="flex flex-col items-center justify-center mt-20">
+      <h1 class="text-3xl font-bold underline game-tittle">Number Guessing Game</h1>
+      <div class="border-2 border-radius-2 h-auto w-auto mt-10 p-[10px] bg-black/40 transparent text-white flex flex-col gap-5 items-center mx-5">
+       <div><p>Try and Guess A Random Number between 1 and Hundred</p></div>
+       <div><p>You Have Ten Attempt to Guess the Right Number</p></div>
+       <div>
+        <form>
+         <label>Guess a Number : </label>
+        <input type="text" class="text-black outline-none p-2 " id="inputfield">
+       </div>
+        <div>
+        <input type="submit" value="Submit Guess" class="h-auto w-auto p-3 bg-black border rounded-lg" id="submit">
+       </div>
+        </form>
+       <div  >
+        Previous Guess :<span id="guessess"></span>
+      </div>
+       <div>
+        <p>Guess Remaning :<span id="lastResult">10</span></p>
+      </div>
+      <div id="lowORhigh"></div>
+      <div id="resultParas"></div>
+      </div>
+      
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
